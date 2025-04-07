@@ -3,7 +3,7 @@ package com.example.comp3025_assignment_02.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope  // Import added here
+import androidx.lifecycle.viewModelScope
 import com.example.comp3025_assignment_02.model.MovieDetail
 import com.example.comp3025_assignment_02.model.MovieSearchResult
 import com.example.comp3025_assignment_02.repository.MovieRepository
@@ -13,8 +13,8 @@ class MovieViewModel : ViewModel() {
 
     private val repository = MovieRepository()
 
-    private val _searchResults = MutableLiveData<List<MovieSearchResult>>()
-    val searchResults: LiveData<List<MovieSearchResult>> get() = _searchResults
+    private val _searchResults = MutableLiveData<List<MovieSearchResult>?>()
+    val searchResults: MutableLiveData<List<MovieSearchResult>?> get() = _searchResults
 
     private val _movieDetail = MutableLiveData<MovieDetail>()
     val movieDetail: LiveData<MovieDetail> get() = _movieDetail

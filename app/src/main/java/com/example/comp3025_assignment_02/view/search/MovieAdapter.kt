@@ -1,4 +1,4 @@
-package com.example.comp3025_assignment_02.ui.search
+package com.example.comp3025_assignment_02.view.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

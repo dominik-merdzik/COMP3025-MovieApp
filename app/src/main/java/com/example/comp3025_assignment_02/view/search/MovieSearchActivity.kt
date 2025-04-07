@@ -1,4 +1,4 @@
-package com.example.comp3025_assignment_02.ui.search
+package com.example.comp3025_assignment_02.view.search
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.comp3025_assignment_02.databinding.ActivityMovieSearchBinding
-import com.example.comp3025_assignment_02.ui.details.MovieDetailActivity
-import com.example.comp3025_assignment_02.util.hideKeyboard
+import com.example.comp3025_assignment_02.view.details.MovieDetailActivity
 import com.example.comp3025_assignment_02.viewmodel.MovieViewModel
 
 class MovieSearchActivity : AppCompatActivity() {
@@ -43,7 +42,6 @@ class MovieSearchActivity : AppCompatActivity() {
 
         // set click listener for the search button
         binding.btnSearch.setOnClickListener {
-            binding.etSearch.hideKeyboard() // hide keyboard when search button is clicked (maybe it's bugged for me?)
             val query = binding.etSearch.text.toString().trim()
             if (query.isNotEmpty()) {
                 movieViewModel.searchMovies(query)

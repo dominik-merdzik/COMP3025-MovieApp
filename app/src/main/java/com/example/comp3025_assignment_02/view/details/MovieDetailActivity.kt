@@ -1,4 +1,4 @@
-package com.example.comp3025_assignment_02.ui.details
+package com.example.comp3025_assignment_02.view.details
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
